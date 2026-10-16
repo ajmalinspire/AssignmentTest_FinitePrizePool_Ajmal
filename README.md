@@ -1,3 +1,44 @@
+
+# A Note on How I Built This: AI-Assisted and Agentic Development
+
+I used AI heavily on this assignment, and I want to be upfront about it. I used [tools, e.g. Claude, Claude Code, Unity CLI] to explore the problem, plan the architecture, generate code, write tests and review my own work.
+
+**Why this task suits AI-assisted development**
+
+This assignment is deliberately broad. It asks for:
+
+exact integer-cent math and a deal-size calculator across 40 mode/bet combinations
+a cryptographically shuffled deal builder with placement constraints and retry limits
+crash-safe saving, pending-result recovery and a deal lifecycle (Ready, Active, Completed, Retired)
+a background-built successor deal, a retire/audit flow and a Unity client with debug tools
+Edit Mode tests, a simulation report and a design note
+
+Even though the estimate in brief is 4–5 working days, this test assignment was completed in 2 days deadline given by HR.I respected the deadline as I was confident in building this with AI Assistance, and also needed a case where I could apply and learn more Agentic Developement.
+Much of that work required for this task is well-defined and repetitive: boilerplate, serialization, assembly definitions, test scaffolding, CSV export, editor windows. AI is very good at that. It let me spend my time on the parts that need judgment.  
+-getting the math exactly right  
+-designing the engine/game boundary (IDealService) so the engine could move to a server  
+-deciding how to handle failure cases: crashes mid-save, mid-animation exits, impossible configs  
+
+**How I worked**  
+
+I read the specification and understood the model first. Finite pools, bags, cycles, paired cycles, RTP and placement limits. I did not delegate understanding.
+I used AI to plan and build in small steps. Engine first, then calculator, builder, spin service, persistence, lifecycle, UI.
+I treated AI output as a draft, not an answer. Every piece was checked against the brief.
+I verified with tests and simulation rather than trust. The Edit Mode tests cover the §8.1 scenarios, and the simulation report shows actual RTP across complete deals. Exactly 90% RTP is a property that can be proven in code, and that is the check I relied on.
+I documented what I skipped or assumed, as the brief asks, in the design note.
+
+**What is mine:** the architecture decisions, the interpretation of ambiguous requirements, the review and correction of generated code, and the acceptance criteria I tested against.
+
+**What this shows about how I’d work on your team**  
+Speed with rigor. Work that would take days to type by hand can be built, tested and iterated much faster, and I use the saved time on verification and edge cases.
+Breadth. Math, concurrency, persistence, tooling and UI in one project. AI lets one engineer cover that range without cutting corners.
+
+**A perspective on the changing landscape:**
+
+Software development is shifting quickly. Writing every line by hand is becoming less of the job, and designing, specifying, verifying and shipping correct systems is becoming more of it. I believe a developer should be judged on the quality of the solution: whether it is correct, well structured, tested, explainable and maintainable. Typing speed or the manual authorship of each line should count for much less. Compilers, IDEs, libraries and Stack Overflow each changed what “writing code” meant, and AI is the next step in that progression.
+
+I’m glad to walk through any part of the code, explain the reasoning behind a decision, or modify it live. I stand behind every part of this submission, and I’d love to be evaluated on whether it works and whether I understand it.
+
 # Finite Prize Pool (Unity)
 
 A finite-prize-pool game built entirely in Unity and C#. Prizes are not drawn at random on each spin: they are
@@ -7,7 +48,7 @@ takes the next ticket. When a deal is fully used, its RTP is exactly 90%.
 **Unity version: 6000.3.9f1 (Unity 6.3 LTS).** The Unity project is in `FinitePrizePoolProject/`.
 
 > **Assumed bags.** The Inner and Outer bags come from the *Finite Pool Mathematics* PDF (pages 2-3), which was
-> not available. The config uses made-up bags (`assumed-bags-v1`) chosen so that every fact the brief states
+> not available. I have contatcted hr , and she said this brief is the only pdf available. The config uses made-up bags (`assumed-bags-v1`) chosen so that every fact the brief states
 > about them holds. See `Docs/DesignNote.md`, "Assumptions". Swapping in the real bags means editing one JSON file.
 
 ## Open and run
