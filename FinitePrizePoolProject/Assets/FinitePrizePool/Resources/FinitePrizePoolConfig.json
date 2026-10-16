@@ -1,0 +1,57 @@
+{
+  "configVersion": "assumed-bags-v1",
+  "note": "ASSUMED BAGS. The brief takes the Inner and Outer bags from 'Finite Pool Mathematics' pages 2-3, which was not available. These bags were made up so the brief's stated facts hold (Inner $1.00 = 1 paired cycle, Outer $1.00 = 9, Outer $1.75 with one cycle is fractional, Outer $4.75 needs a very large deal, Inner $1.00 with max consecutive losses 5 is impossible). Replace the four bags with the real ones and change configVersion.",
+  "targetRtpBasisPoints": 9000,
+  "rtpMode": "Exact",
+  "toleranceBasisPoints": 10,
+  "bonusUnitCents": 100,
+  "betLevelsCents": [25, 50, 75, 100, 125, 150, 175, 200, 225, 250, 275, 300, 325, 350, 375, 400, 425, 450, 475, 500],
+  "maxGenerationAttempts": 1000,
+  "placement": {
+    "limitFactor": 2,
+    "maxConsecutiveLossesOverride": null,
+    "maxRegularGapOverride": null,
+    "maxBigGapOverride": null,
+    "forbidRepeatingInterval": true,
+    "strategy": "ConstrainedShuffle"
+  },
+  "testPlayers": [
+    { "id": "player-1", "name": "Player 1", "startingBalanceCents": 50000 },
+    { "id": "player-2", "name": "Player 2", "startingBalanceCents": 20000 }
+  ],
+  "modes": [
+    {
+      "name": "Inner",
+      "regularBag": [
+        { "multiplier": 1, "count": 3 },
+        { "multiplier": 2, "count": 2 },
+        { "multiplier": 3, "count": 1 },
+        { "multiplier": 5, "count": 1 },
+        { "bonusUnits": 2, "count": 1 }
+      ],
+      "bigBag": [
+        { "multiplier": 20, "count": 1 },
+        { "multiplier": 25, "count": 1 },
+        { "bonusUnits": 10, "count": 1 }
+      ]
+    },
+    {
+      "name": "Outer",
+      "regularBag": [
+        { "multiplier": 1, "count": 4 },
+        { "multiplier": 2, "count": 3 },
+        { "multiplier": 3, "count": 2 },
+        { "multiplier": 5, "count": 2 },
+        { "multiplier": 10, "count": 1 },
+        { "bonusUnits": 2, "count": 1 },
+        { "bonusUnits": 5, "count": 1 }
+      ],
+      "bigBag": [
+        { "multiplier": 25, "count": 1 },
+        { "multiplier": 50, "count": 1 },
+        { "multiplier": 100, "count": 1 },
+        { "bonusUnits": 20, "count": 1 }
+      ]
+    }
+  ]
+}

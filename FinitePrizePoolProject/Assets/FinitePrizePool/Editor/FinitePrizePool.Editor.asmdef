@@ -1,0 +1,19 @@
+{
+    "name": "FinitePrizePool.Editor",
+    "rootNamespace": "FinitePrizePool.EditorTools",
+    "references": [
+        "FinitePrizePool.Engine",
+        "FinitePrizePool.Game"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,4 @@
+<!-- Keeps the engine's save and config classes in IL2CPP / stripped player builds: Newtonsoft.Json creates them by reflection. -->
+<linker>
+  <assembly fullname="FinitePrizePool.Engine" preserve="all" />
+</linker>

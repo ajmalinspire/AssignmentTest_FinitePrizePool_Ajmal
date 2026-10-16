@@ -1,0 +1,2 @@
+Deal ID,Mode,Bet,Config version,State,Tickets,Tickets used,Tickets remaining,Total wagers,Total payouts,Target RTP,Planned RTP,Actual RTP,Reached target,Created (UTC),Activated (UTC),Finished (UTC),Note
+deal-000001,Inner,1.00,assumed-bags-v1,Retired,80,20,60,20.00,31.00,90.00%,90.0000%,155.0000%,no,2026-10-16 10:00:16,2026-10-16 10:00:16,2026-10-16 10:51:52,Retired: Retiring Test

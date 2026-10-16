@@ -1,0 +1,19 @@
+{
+    "name": "FinitePrizePool.CanvasUI",
+    "rootNamespace": "FinitePrizePool.CanvasUI",
+    "references": [
+        "FinitePrizePool.Engine",
+        "FinitePrizePool.Game",
+        "UnityEngine.UI",
+        "Unity.TextMeshPro"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

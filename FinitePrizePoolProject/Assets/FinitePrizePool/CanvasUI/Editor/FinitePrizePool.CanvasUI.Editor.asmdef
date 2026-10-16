@@ -1,0 +1,23 @@
+{
+    "name": "FinitePrizePool.CanvasUI.Editor",
+    "rootNamespace": "FinitePrizePool.CanvasUI.EditorTools",
+    "references": [
+        "FinitePrizePool.Engine",
+        "FinitePrizePool.Game",
+        "FinitePrizePool.Editor",
+        "FinitePrizePool.CanvasUI",
+        "UnityEngine.UI",
+        "Unity.TextMeshPro"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
